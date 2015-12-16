@@ -63,7 +63,7 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 //    if ([DataEngine sharedDataEngine].isFirstInstruction) {
 //        [self showCustomIntro];
 //    }
-    // 启动图片
+    // 启动图片 cocofix test
     CGRect rt  = [[UIScreen mainScreen] bounds];
     UIImageView * splashView = [[UIImageView alloc] initWithFrame:rt];
     [splashView setImageWithURL:[NSURL URLWithString:@"http://pic.qiantucdn.com/58pic/17/29/78/04F58PICB6w_1024.jpg"] placeholderImage:[UIImage imageNamed:@"start_load_default"]];
