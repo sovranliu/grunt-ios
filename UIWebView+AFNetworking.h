@@ -1,4 +1,4 @@
-// UIWebView+AFNetworking.h
+﻿//  UIWebView+AFNetworking.h
 //
 // Copyright (c) 2013-2014 AFNetworking (http://afnetworking.com)
 //
