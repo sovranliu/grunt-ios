@@ -51,6 +51,8 @@
         [userDic setValue:@"" forKey:@"kPhoneNumberKey"];
         
         [userDic setValue:[NSNumber numberWithBool:NO] forKey:@"kIsLoginKey"];
+        
+        [userDic setValue:@"" forKey:@"KDeviceToken"];
         [userDic setValue:[NSNumber numberWithBool:YES] forKey:@"kIsFirstInstructionKey"];
         
         [userDic writeToFile:filePath atomically:YES];
@@ -67,6 +69,8 @@
         NSMutableDictionary *userDic = [[NSMutableDictionary alloc] initWithContentsOfFile:filepath];
         
         self.isLogin = [userDic valueForKey:@"kIsLoginKey"] ? [[userDic valueForKey:@"kIsLoginKey"] boolValue] : NO;
+        
+        self.deviceToken = [userDic valueForKey:@"KDeviceToken"];
         self.userName = [userDic valueForKey:@"kPhoneNumberKey"];
         self.isFirstInstruction = [[userDic valueForKey:@"kIsFirstInstructionKey"] boolValue];
     }
@@ -87,6 +91,7 @@
             {
                 [userDic setValue:[NSNumber numberWithBool:self.isLogin] forKey:@"kIsLoginKey"];
                 [userDic setValue:self.userName forKey:@"kPhoneNumberKey"];
+                [userDic setValue:self.deviceToken forKey:@"KDeviceToken"];
             }
             else
             {

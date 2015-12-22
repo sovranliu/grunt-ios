@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		634B65051B78D57900F9B3E0 /* MenuConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 634B65041B78D57900F9B3E0 /* MenuConfig.plist */; };
 		634B650B1B78D9B200F9B3E0 /* HDSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B650A1B78D9B200F9B3E0 /* HDSMainViewController.m */; };
-		634B650E1B78DAB000F9B3E0 /* HDSAskDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B650D1B78DAB000F9B3E0 /* HDSAskDoctorViewController.m */; };
-		634B65111B78DB5E00F9B3E0 /* HDSScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B65101B78DB5E00F9B3E0 /* HDSScheduleViewController.m */; };
-		634B65141B78DBB100F9B3E0 /* HDSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B65131B78DBB100F9B3E0 /* HDSMineViewController.m */; };
+		634B650E1B78DAB000F9B3E0 /* HDSProcessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B650D1B78DAB000F9B3E0 /* HDSProcessViewController.m */; };
+		634B65111B78DB5E00F9B3E0 /* HDSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B65101B78DB5E00F9B3E0 /* HDSMineViewController.m */; };
 		CD72C2011B789DBD000FDF73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD72C2001B789DBD000FDF73 /* main.m */; };
 		CD72C2041B789DBD000FDF73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD72C2031B789DBD000FDF73 /* AppDelegate.m */; };
 		CD72C21B1B789DBD000FDF73 /* GruntTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD72C21A1B789DBD000FDF73 /* GruntTests.m */; };
@@ -88,6 +87,14 @@
 		CD72C3081B7AF0CD000FDF73 /* bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD72C3041B7AF0CD000FDF73 /* bg2@2x.png */; };
 		CD72C3091B7AF0CD000FDF73 /* bg3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD72C3051B7AF0CD000FDF73 /* bg3@2x.png */; };
 		CD72C30A1B7AF0CD000FDF73 /* bg4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD72C3061B7AF0CD000FDF73 /* bg4@2x.png */; };
+		CD78B5751C26DDE100860900 /* mine_profile_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD78B5731C26DDE100860900 /* mine_profile_default@2x.png */; };
+		CD78B5761C26DDE100860900 /* mine_profile_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD78B5741C26DDE100860900 /* mine_profile_default@3x.png */; };
+		CD78B5801C26E48A00860900 /* TOWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B5791C26E48A00860900 /* TOWebViewController.m */; };
+		CD78B5811C26E48A00860900 /* TOActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B57B1C26E48A00860900 /* TOActivitySafari.m */; };
+		CD78B5821C26E48A00860900 /* TOActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B57D1C26E48A00860900 /* TOActivityChrome.m */; };
+		CD78B5831C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B57F1C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m */; };
+		CD8DB2181C22F4740082646C /* HDSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8DB2171C22F4740082646C /* HDSLoginViewController.m */; };
+		CD8DB21A1C22F9A60082646C /* health_history@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8DB2191C22F9A60082646C /* health_history@3x.png */; };
 		CD9126831C213B0E0040E455 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9126821C213B0E0040E455 /* Images.xcassets */; };
 		CD9126AC1C2149550040E455 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9126A71C2149550040E455 /* MKAnnotationView+WebCache.m */; };
 		CD9126AD1C2149550040E455 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9126A91C2149550040E455 /* UIButton+WebCache.m */; };
@@ -117,12 +124,10 @@
 		634B65041B78D57900F9B3E0 /* MenuConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuConfig.plist; sourceTree = "<group>"; };
 		634B65091B78D9B200F9B3E0 /* HDSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSMainViewController.h; sourceTree = "<group>"; };
 		634B650A1B78D9B200F9B3E0 /* HDSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSMainViewController.m; sourceTree = "<group>"; };
-		634B650C1B78DAB000F9B3E0 /* HDSAskDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSAskDoctorViewController.h; sourceTree = "<group>"; };
-		634B650D1B78DAB000F9B3E0 /* HDSAskDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSAskDoctorViewController.m; sourceTree = "<group>"; };
-		634B650F1B78DB5E00F9B3E0 /* HDSScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSScheduleViewController.h; sourceTree = "<group>"; };
-		634B65101B78DB5E00F9B3E0 /* HDSScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSScheduleViewController.m; sourceTree = "<group>"; };
-		634B65121B78DBB100F9B3E0 /* HDSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSMineViewController.h; sourceTree = "<group>"; };
-		634B65131B78DBB100F9B3E0 /* HDSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSMineViewController.m; sourceTree = "<group>"; };
+		634B650C1B78DAB000F9B3E0 /* HDSProcessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSProcessViewController.h; sourceTree = "<group>"; };
+		634B650D1B78DAB000F9B3E0 /* HDSProcessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSProcessViewController.m; sourceTree = "<group>"; };
+		634B650F1B78DB5E00F9B3E0 /* HDSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSMineViewController.h; sourceTree = "<group>"; };
+		634B65101B78DB5E00F9B3E0 /* HDSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSMineViewController.m; sourceTree = "<group>"; };
 		CD72C1FB1B789DBD000FDF73 /* Grunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD72C1FF1B789DBD000FDF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD72C2001B789DBD000FDF73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -249,6 +254,19 @@
 		CD72C3041B7AF0CD000FDF73 /* bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg2@2x.png"; sourceTree = "<group>"; };
 		CD72C3051B7AF0CD000FDF73 /* bg3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg3@2x.png"; sourceTree = "<group>"; };
 		CD72C3061B7AF0CD000FDF73 /* bg4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg4@2x.png"; sourceTree = "<group>"; };
+		CD78B5731C26DDE100860900 /* mine_profile_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_profile_default@2x.png"; sourceTree = "<group>"; };
+		CD78B5741C26DDE100860900 /* mine_profile_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_profile_default@3x.png"; sourceTree = "<group>"; };
+		CD78B5781C26E48A00860900 /* TOWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOWebViewController.h; sourceTree = "<group>"; };
+		CD78B5791C26E48A00860900 /* TOWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOWebViewController.m; sourceTree = "<group>"; };
+		CD78B57A1C26E48A00860900 /* TOActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOActivitySafari.h; sourceTree = "<group>"; };
+		CD78B57B1C26E48A00860900 /* TOActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivitySafari.m; sourceTree = "<group>"; };
+		CD78B57C1C26E48A00860900 /* TOActivityChrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOActivityChrome.h; sourceTree = "<group>"; };
+		CD78B57D1C26E48A00860900 /* TOActivityChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivityChrome.m; sourceTree = "<group>"; };
+		CD78B57E1C26E48A00860900 /* UIImage+TOWebViewControllerIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TOWebViewControllerIcons.h"; sourceTree = "<group>"; };
+		CD78B57F1C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TOWebViewControllerIcons.m"; sourceTree = "<group>"; };
+		CD8DB2161C22F4740082646C /* HDSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSLoginViewController.h; sourceTree = "<group>"; };
+		CD8DB2171C22F4740082646C /* HDSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSLoginViewController.m; sourceTree = "<group>"; };
+		CD8DB2191C22F9A60082646C /* health_history@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "health_history@3x.png"; sourceTree = "<group>"; };
 		CD9126821C213B0E0040E455 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD9126A51C2149320040E455 /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
 		CD9126A61C2149550040E455 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -322,12 +340,12 @@
 			children = (
 				634B65091B78D9B200F9B3E0 /* HDSMainViewController.h */,
 				634B650A1B78D9B200F9B3E0 /* HDSMainViewController.m */,
-				634B650C1B78DAB000F9B3E0 /* HDSAskDoctorViewController.h */,
-				634B650D1B78DAB000F9B3E0 /* HDSAskDoctorViewController.m */,
-				634B650F1B78DB5E00F9B3E0 /* HDSScheduleViewController.h */,
-				634B65101B78DB5E00F9B3E0 /* HDSScheduleViewController.m */,
-				634B65121B78DBB100F9B3E0 /* HDSMineViewController.h */,
-				634B65131B78DBB100F9B3E0 /* HDSMineViewController.m */,
+				CD8DB2161C22F4740082646C /* HDSLoginViewController.h */,
+				CD8DB2171C22F4740082646C /* HDSLoginViewController.m */,
+				634B650C1B78DAB000F9B3E0 /* HDSProcessViewController.h */,
+				634B650D1B78DAB000F9B3E0 /* HDSProcessViewController.m */,
+				634B650F1B78DB5E00F9B3E0 /* HDSMineViewController.h */,
+				634B65101B78DB5E00F9B3E0 /* HDSMineViewController.m */,
 			);
 			name = GruntViewControllers;
 			sourceTree = "<group>";
@@ -482,6 +500,7 @@
 		CD72C2511B789F16000FDF73 /* CMCompoment */ = {
 			isa = PBXGroup;
 			children = (
+				CD78B5771C26E47E00860900 /* CMUIWebView */,
 				CD9126BA1C2149A00040E455 /* CMSDWebImage */,
 				CDDBEA811B7C6E750077AA63 /* CMUIViewPositioning */,
 				CD72C2F61B7AE2DA000FDF73 /* EAIntroView */,
@@ -715,6 +734,9 @@
 		CD72C2ED1B79E888000FDF73 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CD78B5731C26DDE100860900 /* mine_profile_default@2x.png */,
+				CD78B5741C26DDE100860900 /* mine_profile_default@3x.png */,
+				CD8DB2191C22F9A60082646C /* health_history@3x.png */,
 				CDDBEA871B7D951E0077AA63 /* home_footbar_icon_dianping_pressed@2x.png */,
 				CDDBEA881B7D951E0077AA63 /* home_footbar_icon_dianping@2x.png */,
 				CD72C3031B7AF0CD000FDF73 /* bg1@2x.png */,
@@ -742,6 +764,21 @@
 				CD72C2FA1B7AE2DA000FDF73 /* EAIntroView.m */,
 			);
 			path = EAIntroView;
+			sourceTree = "<group>";
+		};
+		CD78B5771C26E47E00860900 /* CMUIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				CD78B5781C26E48A00860900 /* TOWebViewController.h */,
+				CD78B5791C26E48A00860900 /* TOWebViewController.m */,
+				CD78B57A1C26E48A00860900 /* TOActivitySafari.h */,
+				CD78B57B1C26E48A00860900 /* TOActivitySafari.m */,
+				CD78B57C1C26E48A00860900 /* TOActivityChrome.h */,
+				CD78B57D1C26E48A00860900 /* TOActivityChrome.m */,
+				CD78B57E1C26E48A00860900 /* UIImage+TOWebViewControllerIcons.h */,
+				CD78B57F1C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m */,
+			);
+			name = CMUIWebView;
 			sourceTree = "<group>";
 		};
 		CD9126AF1C2149640040E455 /* Categories */ = {
@@ -898,18 +935,21 @@
 				CDDBEA891B7D951E0077AA63 /* home_footbar_icon_dianping_pressed@2x.png in Resources */,
 				CD72C3071B7AF0CD000FDF73 /* bg1@2x.png in Resources */,
 				CD72C2451B789E82000FDF73 /* ShareSDKLocalizable.strings in Resources */,
+				CD78B5751C26DDE100860900 /* mine_profile_default@2x.png in Resources */,
 				CD72C2F51B79EA38000FDF73 /* tray_menu_home_normal.png in Resources */,
 				CD72C30A1B7AF0CD000FDF73 /* bg4@2x.png in Resources */,
 				CD72C2EF1B79E899000FDF73 /* navigationBarBGIOS7.png in Resources */,
 				CD72C2F11B79E8B4000FDF73 /* tray_menu_bg.png in Resources */,
 				CD72C24B1B789E82000FDF73 /* WeiboSDK.bundle in Resources */,
 				634B65051B78D57900F9B3E0 /* MenuConfig.plist in Resources */,
+				CD8DB21A1C22F9A60082646C /* health_history@3x.png in Resources */,
 				CD72C3091B7AF0CD000FDF73 /* bg3@2x.png in Resources */,
 				CD9126831C213B0E0040E455 /* Images.xcassets in Resources */,
 				CD72C3081B7AF0CD000FDF73 /* bg2@2x.png in Resources */,
 				CD72C2F41B79EA38000FDF73 /* tray_menu_home_highlighted.png in Resources */,
 				CDDBEA8A1B7D951E0077AA63 /* home_footbar_icon_dianping@2x.png in Resources */,
 				CD72C24E1B789E82000FDF73 /* ShareSDKFlatShareViewUI.bundle in Resources */,
+				CD78B5761C26DDE100860900 /* mine_profile_default@3x.png in Resources */,
 				CD72C2461B789E82000FDF73 /* Resource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -936,20 +976,23 @@
 				CD72C29D1B78A26B000FDF73 /* AFHTTPRequestOperationManager.m in Sources */,
 				CDDBEA861B7C6E910077AA63 /* UIView+Positioning.m in Sources */,
 				CD9126B81C21498E0040E455 /* SDWebImageDecoder.m in Sources */,
+				CD78B5821C26E48A00860900 /* TOActivityChrome.m in Sources */,
 				CD72C2FB1B7AE2DA000FDF73 /* EAIntroPage.m in Sources */,
-				634B65141B78DBB100F9B3E0 /* HDSMineViewController.m in Sources */,
 				CD9126C41C2149F40040E455 /* SDWebImageDownloader.m in Sources */,
 				CD72C2A31B78A27F000FDF73 /* AFURLSessionManager.m in Sources */,
 				CD72C29C1B78A26B000FDF73 /* AFHTTPRequestOperation.m in Sources */,
 				CD72C2A41B78A27F000FDF73 /* AFHTTPSessionManager.m in Sources */,
 				CD72C2C81B78A2F6000FDF73 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				CD78B5831C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m in Sources */,
 				CD72C27C1B78A10F000FDF73 /* CMTabBarController.m in Sources */,
 				CD72C2D51B78A31A000FDF73 /* DataItem.m in Sources */,
 				CD72C2CE1B78A2F6000FDF73 /* UIWebView+AFNetworking.m in Sources */,
 				CD72C27B1B78A10F000FDF73 /* CMTabBar.m in Sources */,
 				CD9126B71C21498E0040E455 /* SDWebImageManager.m in Sources */,
-				634B650E1B78DAB000F9B3E0 /* HDSAskDoctorViewController.m in Sources */,
+				CD78B5811C26E48A00860900 /* TOActivitySafari.m in Sources */,
+				634B650E1B78DAB000F9B3E0 /* HDSProcessViewController.m in Sources */,
 				CD72C2C71B78A2F6000FDF73 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				CD8DB2181C22F4740082646C /* HDSLoginViewController.m in Sources */,
 				CD72C29B1B78A26B000FDF73 /* AFURLConnectionOperation.m in Sources */,
 				CD72C2C91B78A2F6000FDF73 /* UIAlertView+AFNetworking.m in Sources */,
 				CD72C26B1B78A097000FDF73 /* UINavigationItem+Margin.m in Sources */,
@@ -969,7 +1012,8 @@
 				CD72C2011B789DBD000FDF73 /* main.m in Sources */,
 				CD72C25F1B78A05F000FDF73 /* CMView.m in Sources */,
 				CD9126BF1C2149DB0040E455 /* SDImageCache.m in Sources */,
-				634B65111B78DB5E00F9B3E0 /* HDSScheduleViewController.m in Sources */,
+				CD78B5801C26E48A00860900 /* TOWebViewController.m in Sources */,
+				634B65111B78DB5E00F9B3E0 /* HDSMineViewController.m in Sources */,
 				CD9126AD1C2149550040E455 /* UIButton+WebCache.m in Sources */,
 				CD72C2AA1B78A29D000FDF73 /* AFURLRequestSerialization.m in Sources */,
 				CD72C2B31B78A2C8000FDF73 /* AFSecurityPolicy.m in Sources */,

@@ -13,6 +13,9 @@
 
 // 是否登陆
 @property(nonatomic,assign) BOOL  isLogin;
+
+// token
+@property(nonatomic,strong)NSString * deviceToken;
 // 用户名
 @property(nonatomic,strong) NSString * userName;
 // 操作指引

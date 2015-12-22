@@ -36,7 +36,7 @@
 			<key>ViewType</key>
 			<string>ViewController</string>
 			<key>ViewName</key>
-			<string>HDSAskDoctorViewController</string>
+			<string>HDSProcessViewController</string>
 			<key>IsShowNav</key>
 			<true/>
 			<key>selTabBarIndex</key>
@@ -54,7 +54,7 @@
 			<key>IsShowNav</key>
 			<string>YES</string>
 			<key>ViewName</key>
-			<string>HDSScheduleViewController</string>
+			<string>HDSMineViewController</string>
 			<key>KeyName</key>
 			<string>CakeList</string>
 			<key>Title</key>
@@ -63,26 +63,6 @@
 			<integer>2</integer>
 			<key>dspInTabBarIndex</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>dspInLeftViewId</key>
-			<integer>4</integer>
-			<key>IsResident</key>
-			<true/>
-			<key>Title</key>
-			<string>我的</string>
-			<key>KeyName</key>
-			<string>News</string>
-			<key>ViewType</key>
-			<string>ViewController</string>
-			<key>ViewName</key>
-			<string>HDSMineViewController</string>
-			<key>IsShowNav</key>
-			<string>YES</string>
-			<key>selTabBarIndex</key>
-			<integer>3</integer>
-			<key>dspInTabBarIndex</key>
-			<integer>3</integer>
 		</dict>
 	</array>
 </dict>

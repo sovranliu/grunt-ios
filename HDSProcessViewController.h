@@ -1,5 +1,5 @@
 //
-//  HDSAskDoctorViewController.h
+//  HDSProcessViewController.h
 //  HDMedical
 //
 //  Created by David on 15-8-10.
@@ -8,6 +8,6 @@
 
 #import "CMViewController.h"
 
-@interface HDSAskDoctorViewController : CMViewController
+@interface HDSProcessViewController : CMViewController
 
 @end

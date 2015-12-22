@@ -1,25 +1,25 @@
 //
-//  HDSScheduleViewController.m
+//  HDSProcessViewController.m
 //  HDMedical
 //
 //  Created by David on 15-8-10.
 //  Copyright (c) 2015年 HD. All rights reserved.
 //
 
-#import "HDSScheduleViewController.h"
+#import "HDSProcessViewController.h"
 
-@interface HDSScheduleViewController ()
+@interface HDSProcessViewController ()
 
 @end
 
-@implementation HDSScheduleViewController
+@implementation HDSProcessViewController
 
 - (id)init
 {
     self = [super init];
     if (self)
     {
-        self.title      = @"预约";
+        self.title      = @"进程";
         self.showNav    = YES;
         self.resident   = YES;
         [self createTabBarItem:self.title iconImgName:@"home_footbar_icon_dianping" selIconImgName:@"home_footbar_icon_dianping_pressed"];

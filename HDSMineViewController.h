@@ -8,6 +8,6 @@
 
 #import "CMViewController.h"
 
-@interface HDSMineViewController : CMViewController
-
+@interface HDSMineViewController : CMViewController<UITableViewDataSource,UITableViewDelegate>
+@property(nonatomic,strong)UITableView * mineTableView;
 @end

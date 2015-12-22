@@ -9,6 +9,6 @@
 #import "CMViewController.h"
 
 
-@interface HDSMainViewController : CMViewController
-
+@interface HDSMainViewController : CMViewController<UIWebViewDelegate>
+@property (strong,atomic)UIWebView * mainwebView;
 @end

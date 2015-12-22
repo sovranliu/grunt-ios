@@ -54,7 +54,9 @@
 //    if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 5.0) self.navigationController.delegate = self;
     if ((floor(NSFoundationVersionNumber))>NSFoundationVersionNumber_iOS_6_1 && [[[UIDevice currentDevice] systemVersion] floatValue]>=7.0) [self setNeedsStatusBarAppearanceUpdate];
     
-    [NavigationFunc setNavigationBarBackgrounImage:self image:[CommonDrawFunc retinaImageNamed:(IOS_VERSION_7_OR_ABOVE ? @"navigationBarBGIOS7.png" : @"navigationBarBG.png")]];
+//    [NavigationFunc setNavigationBarBackgrounImage:self image:[CommonDrawFunc retinaImageNamed:(IOS_VERSION_7_OR_ABOVE ? @"navigationBarBGIOS7.png" : @"navigationBarBG.png")]];
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:18.0/255.0 green:134.0/255.0 blue:154.0/255.0 alpha:1.0];
 
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,[UIColor colorWithRed:0 green:0.7 blue:0.8 alpha:1.0],UITextAttributeTextShadowColor,nil]];
     [self loadUIData];
