@@ -538,4 +538,6 @@ static CGFloat demoRGInnerRadius(CGRect bounds)
     CGContextSetGrayFillColor(gc, 0.0, alpha);
     CGContextRestoreGState(gc);
 }
+
+
 @end

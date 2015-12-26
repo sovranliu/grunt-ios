@@ -93,6 +93,14 @@
 		CD78B5811C26E48A00860900 /* TOActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B57B1C26E48A00860900 /* TOActivitySafari.m */; };
 		CD78B5821C26E48A00860900 /* TOActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B57D1C26E48A00860900 /* TOActivityChrome.m */; };
 		CD78B5831C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B57F1C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m */; };
+		CD78B58F1C2A91FA00860900 /* CLLocation+YCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B58C1C2A91FA00860900 /* CLLocation+YCLocation.m */; };
+		CD78B5901C2A91FA00860900 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B58E1C2A91FA00860900 /* CCLocationManager.m */; };
+		CD78B5941C2AA1E800860900 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B5931C2AA1E800860900 /* RootViewController.m */; };
+		CD78B5971C2AA35A00860900 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD78B5951C2AA35A00860900 /* line@2x.png */; };
+		CD78B5981C2AA35A00860900 /* pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD78B5961C2AA35A00860900 /* pick_bg@2x.png */; };
+		CD78B59D1C2AA78F00860900 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = CD78B59A1C2AA78F00860900 /* WebViewJavascriptBridge.js.txt */; };
+		CD78B59E1C2AA78F00860900 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = CD78B59C1C2AA78F00860900 /* WebViewJavascriptBridge.m */; };
+		CD82DDA01C2D1E0C005DBFFD /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CD82DD9F1C2D1E0C005DBFFD /* NSString+Utils.m */; };
 		CD8DB2181C22F4740082646C /* HDSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8DB2171C22F4740082646C /* HDSLoginViewController.m */; };
 		CD8DB21A1C22F9A60082646C /* health_history@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8DB2191C22F9A60082646C /* health_history@3x.png */; };
 		CD9126831C213B0E0040E455 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9126821C213B0E0040E455 /* Images.xcassets */; };
@@ -264,6 +272,19 @@
 		CD78B57D1C26E48A00860900 /* TOActivityChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivityChrome.m; sourceTree = "<group>"; };
 		CD78B57E1C26E48A00860900 /* UIImage+TOWebViewControllerIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TOWebViewControllerIcons.h"; sourceTree = "<group>"; };
 		CD78B57F1C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TOWebViewControllerIcons.m"; sourceTree = "<group>"; };
+		CD78B58B1C2A91FA00860900 /* CLLocation+YCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+YCLocation.h"; sourceTree = "<group>"; };
+		CD78B58C1C2A91FA00860900 /* CLLocation+YCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+YCLocation.m"; sourceTree = "<group>"; };
+		CD78B58D1C2A91FA00860900 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
+		CD78B58E1C2A91FA00860900 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
+		CD78B5921C2AA1E800860900 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		CD78B5931C2AA1E800860900 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		CD78B5951C2AA35A00860900 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
+		CD78B5961C2AA35A00860900 /* pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pick_bg@2x.png"; sourceTree = "<group>"; };
+		CD78B59A1C2AA78F00860900 /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
+		CD78B59B1C2AA78F00860900 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		CD78B59C1C2AA78F00860900 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		CD82DD9E1C2D1E0C005DBFFD /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		CD82DD9F1C2D1E0C005DBFFD /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 		CD8DB2161C22F4740082646C /* HDSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSLoginViewController.h; sourceTree = "<group>"; };
 		CD8DB2171C22F4740082646C /* HDSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSLoginViewController.m; sourceTree = "<group>"; };
 		CD8DB2191C22F9A60082646C /* health_history@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "health_history@3x.png"; sourceTree = "<group>"; };
@@ -500,6 +521,9 @@
 		CD72C2511B789F16000FDF73 /* CMCompoment */ = {
 			isa = PBXGroup;
 			children = (
+				CD78B5991C2AA74F00860900 /* CMJavaScriptBridge */,
+				CD78B5911C2AA1D100860900 /* CMScan */,
+				CD78B58A1C2A91E400860900 /* CCLocation */,
 				CD78B5771C26E47E00860900 /* CMUIWebView */,
 				CD9126BA1C2149A00040E455 /* CMSDWebImage */,
 				CDDBEA811B7C6E750077AA63 /* CMUIViewPositioning */,
@@ -598,6 +622,8 @@
 				CD72C28A1B78A1BF000FDF73 /* CommonGetPlistFunc.m */,
 				CD72C28B1B78A1BF000FDF73 /* Utils.h */,
 				CD72C28C1B78A1BF000FDF73 /* Utils.m */,
+				CD82DD9E1C2D1E0C005DBFFD /* NSString+Utils.h */,
+				CD82DD9F1C2D1E0C005DBFFD /* NSString+Utils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -781,6 +807,38 @@
 			name = CMUIWebView;
 			sourceTree = "<group>";
 		};
+		CD78B58A1C2A91E400860900 /* CCLocation */ = {
+			isa = PBXGroup;
+			children = (
+				CD78B58B1C2A91FA00860900 /* CLLocation+YCLocation.h */,
+				CD78B58C1C2A91FA00860900 /* CLLocation+YCLocation.m */,
+				CD78B58D1C2A91FA00860900 /* CCLocationManager.h */,
+				CD78B58E1C2A91FA00860900 /* CCLocationManager.m */,
+			);
+			name = CCLocation;
+			sourceTree = "<group>";
+		};
+		CD78B5911C2AA1D100860900 /* CMScan */ = {
+			isa = PBXGroup;
+			children = (
+				CD78B5951C2AA35A00860900 /* line@2x.png */,
+				CD78B5961C2AA35A00860900 /* pick_bg@2x.png */,
+				CD78B5921C2AA1E800860900 /* RootViewController.h */,
+				CD78B5931C2AA1E800860900 /* RootViewController.m */,
+			);
+			name = CMScan;
+			sourceTree = "<group>";
+		};
+		CD78B5991C2AA74F00860900 /* CMJavaScriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				CD78B59A1C2AA78F00860900 /* WebViewJavascriptBridge.js.txt */,
+				CD78B59B1C2AA78F00860900 /* WebViewJavascriptBridge.h */,
+				CD78B59C1C2AA78F00860900 /* WebViewJavascriptBridge.m */,
+			);
+			name = CMJavaScriptBridge;
+			sourceTree = "<group>";
+		};
 		CD9126AF1C2149640040E455 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,6 +960,7 @@
 					};
 					CD72C2131B789DBD000FDF73 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = BWD8K3K74G;
 						TestTargetID = CD72C1FA1B789DBD000FDF73;
 					};
 				};
@@ -932,12 +991,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD72C2491B789E82000FDF73 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				CD78B59D1C2AA78F00860900 /* WebViewJavascriptBridge.js.txt in Resources */,
 				CDDBEA891B7D951E0077AA63 /* home_footbar_icon_dianping_pressed@2x.png in Resources */,
 				CD72C3071B7AF0CD000FDF73 /* bg1@2x.png in Resources */,
 				CD72C2451B789E82000FDF73 /* ShareSDKLocalizable.strings in Resources */,
 				CD78B5751C26DDE100860900 /* mine_profile_default@2x.png in Resources */,
 				CD72C2F51B79EA38000FDF73 /* tray_menu_home_normal.png in Resources */,
 				CD72C30A1B7AF0CD000FDF73 /* bg4@2x.png in Resources */,
+				CD78B5971C2AA35A00860900 /* line@2x.png in Resources */,
 				CD72C2EF1B79E899000FDF73 /* navigationBarBGIOS7.png in Resources */,
 				CD72C2F11B79E8B4000FDF73 /* tray_menu_bg.png in Resources */,
 				CD72C24B1B789E82000FDF73 /* WeiboSDK.bundle in Resources */,
@@ -948,6 +1009,7 @@
 				CD72C3081B7AF0CD000FDF73 /* bg2@2x.png in Resources */,
 				CD72C2F41B79EA38000FDF73 /* tray_menu_home_highlighted.png in Resources */,
 				CDDBEA8A1B7D951E0077AA63 /* home_footbar_icon_dianping@2x.png in Resources */,
+				CD78B5981C2AA35A00860900 /* pick_bg@2x.png in Resources */,
 				CD72C24E1B789E82000FDF73 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				CD78B5761C26DDE100860900 /* mine_profile_default@3x.png in Resources */,
 				CD72C2461B789E82000FDF73 /* Resource.bundle in Resources */,
@@ -968,6 +1030,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD78B5901C2A91FA00860900 /* CCLocationManager.m in Sources */,
 				CD72C3021B7AEF9F000FDF73 /* SMPageControl.m in Sources */,
 				CD72C2CC1B78A2F6000FDF73 /* UIProgressView+AFNetworking.m in Sources */,
 				CD72C2CB1B78A2F6000FDF73 /* UIImageView+AFNetworking.m in Sources */,
@@ -980,11 +1043,13 @@
 				CD72C2FB1B7AE2DA000FDF73 /* EAIntroPage.m in Sources */,
 				CD9126C41C2149F40040E455 /* SDWebImageDownloader.m in Sources */,
 				CD72C2A31B78A27F000FDF73 /* AFURLSessionManager.m in Sources */,
+				CD82DDA01C2D1E0C005DBFFD /* NSString+Utils.m in Sources */,
 				CD72C29C1B78A26B000FDF73 /* AFHTTPRequestOperation.m in Sources */,
 				CD72C2A41B78A27F000FDF73 /* AFHTTPSessionManager.m in Sources */,
 				CD72C2C81B78A2F6000FDF73 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				CD78B5831C26E48A00860900 /* UIImage+TOWebViewControllerIcons.m in Sources */,
 				CD72C27C1B78A10F000FDF73 /* CMTabBarController.m in Sources */,
+				CD78B58F1C2A91FA00860900 /* CLLocation+YCLocation.m in Sources */,
 				CD72C2D51B78A31A000FDF73 /* DataItem.m in Sources */,
 				CD72C2CE1B78A2F6000FDF73 /* UIWebView+AFNetworking.m in Sources */,
 				CD72C27B1B78A10F000FDF73 /* CMTabBar.m in Sources */,
@@ -1005,6 +1070,7 @@
 				CD72C2FF1B7AEE77000FDF73 /* EARestrictedScrollView.m in Sources */,
 				CD72C28F1B78A1BF000FDF73 /* CommonDrawFunc.m in Sources */,
 				CD72C2D41B78A31A000FDF73 /* DataEngine.m in Sources */,
+				CD78B59E1C2AA78F00860900 /* WebViewJavascriptBridge.m in Sources */,
 				CD72C2041B789DBD000FDF73 /* AppDelegate.m in Sources */,
 				CD72C2801B78A145000FDF73 /* MBProgressHUD.m in Sources */,
 				CD72C28E1B78A1BF000FDF73 /* NavigationFunc.m in Sources */,
@@ -1020,6 +1086,7 @@
 				CD72C2CA1B78A2F6000FDF73 /* UIButton+AFNetworking.m in Sources */,
 				CD72C2CD1B78A2F6000FDF73 /* UIRefreshControl+AFNetworking.m in Sources */,
 				CD72C2751B78A0F8000FDF73 /* CMViewController.m in Sources */,
+				CD78B5941C2AA1E800860900 /* RootViewController.m in Sources */,
 				CD9126AC1C2149550040E455 /* MKAnnotationView+WebCache.m in Sources */,
 				CD72C2AB1B78A29D000FDF73 /* AFURLResponseSerialization.m in Sources */,
 				CDDBEA851B7C6E910077AA63 /* README.md in Sources */,
@@ -1077,7 +1144,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: cao gen (BYPQB69666)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: cao gen (BYPQB69666)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1094,7 +1162,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1118,7 +1186,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: cao gen (BYPQB69666)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: cao gen (BYPQB69666)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1129,7 +1198,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1141,7 +1210,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: cao gen (BYPQB69666)";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1152,14 +1222,14 @@
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = Grunt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wehop.Grunt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qxnetcompany.lcb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1169,7 +1239,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: cao gen (BYPQB69666)";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1180,14 +1251,14 @@
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = Grunt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wehop.Grunt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qxnetcompany.lcb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1196,6 +1267,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1207,6 +1280,7 @@
 				INFOPLIST_FILE = GruntTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grunt.app/Grunt";
 			};
 			name = Debug;
@@ -1215,6 +1289,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1222,6 +1298,7 @@
 				INFOPLIST_FILE = GruntTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grunt.app/Grunt";
 			};
 			name = Release;

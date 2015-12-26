@@ -75,6 +75,16 @@
     _tabBar = nil;
 }
 
+- (void)setSelectedVCIndex:(int)index
+{
+    if (index < _tabBar.tabBarItems.count)
+    {
+        //TabBarItem * item = [ _tabBar.tabBarItems objectAtIndex:index];
+        
+        [_tabBar selectedAtIndex:index];
+    }
+}
+
 #pragma mark - private methods
 - (void)doPopToRootViewController:(NSInteger)itemTag
 {

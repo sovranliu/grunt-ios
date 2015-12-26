@@ -23,6 +23,7 @@
 @property (nonatomic, readonly) NSInteger curSelIndex;
 
 - (void)setTabBarSelectedIndex:(NSInteger)selIndex;
+- (void)setSelectedVCIndex:(int)index;
 
 @end
 

@@ -9,6 +9,7 @@
 #import "HDSLoginViewController.h"
 #import "UIView+Positioning.h"
 #import "JSONFormatFunc.h"
+#import "NSString+Utils.h"
 
 
 #import "Utils.h"
@@ -141,11 +142,11 @@
     UITextField * pwdField =  (UITextField *)[self.view viewWithTag:12];
     NSString *phoneNum = textField.text;
     NSString *pwdStr = pwdField.text;
-    if (![Utils checkPhoneNumInput:phoneNum]) {
-        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"手机号码格式不对，请重新输入！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alertView show];
-        return;
-    }
+//    if (![Utils checkPhoneNumInput:phoneNum]) {
+//        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"手机号码格式不对，请重新输入！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//        [alertView show];
+//        return;
+//    }
     
     if ([pwdStr length] == 0) {
         UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入密码！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
@@ -153,18 +154,18 @@
         return;
     }
     
-//    //总参数封装
-//    NSMutableDictionary * totalParamDic =[[NSMutableDictionary alloc] initWithCapacity:1];
-//    [totalParamDic setObject:phoneNum forKey:@"phone"];
-//    [totalParamDic setObject:pwdStr forKey:@"password"];
-//    [totalParamDic setObject:pwdStr forKey:@"code"];
-//    
-//    NSMutableString * baseUrl = [NSMutableString stringWithString:KSLFutureBaseURL];
-//    [baseUrl appendString:KSLFutureLogin];
-//    // 发送数据
-//    [[DataEngine sharedDataEngine] reqAsyncHttpPost:self urlStr:baseUrl userInfo:totalParamDic withReqTag:1];
+    NSString * md5pwdStr = [NSString MD516ByAStr:pwdStr];
     
-    //[[DataEngine sharedDataEngine]  reqHttpWithMockName:@"login" target:self withReqTag:1];
+    //总参数封装
+    NSMutableDictionary * totalParamDic =[[NSMutableDictionary alloc] initWithCapacity:1];
+    [totalParamDic setObject:phoneNum forKey:@"username"];
+    [totalParamDic setObject:md5pwdStr forKey:@"password"];
+    
+    NSMutableString * baseUrl = [NSMutableString stringWithString:KHDLoginURL];
+    // 发送数据
+    [[DataEngine sharedDataEngine] reqAsyncHttpPost:self urlStr:baseUrl userInfo:totalParamDic withReqTag:1];
+    
+
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
@@ -209,17 +210,22 @@
             
             NSMutableDictionary * logindata = [responseData objectForKey:@"data"];
             NSString * deviceToken          =  [JSONFormatFunc strValueForKey:@"token" ofDict:logindata];
-            NSDictionary * loginInfodic =[JSONFormatFunc dictionaryValueForKey:@"info" ofDict:logindata];
+            NSString * userGlobalId          =  [JSONFormatFunc strValueForKey:@"userGlobalId" ofDict:logindata];
+            NSString * username          =  [JSONFormatFunc strValueForKey:@"username" ofDict:logindata];
+            NSString * name          =  [JSONFormatFunc strValueForKey:@"name" ofDict:logindata];
             
-            //[DataEngine sharedDataEngine].loginUserInfoDic = (NSMutableDictionary *)loginInfodic;
             [DataEngine sharedDataEngine].isLogin = YES;
             
             [DataEngine sharedDataEngine].deviceToken = deviceToken;
+            [DataEngine sharedDataEngine].name = name;
+            [DataEngine sharedDataEngine].userName = username;
+            [DataEngine sharedDataEngine].userGlobalId = userGlobalId;
+            
             
             // 保存本地，记录登陆状态
             [[DataEngine sharedDataEngine] saveUserBaseInfoData];
             
-//            [[NSNotificationCenter defaultCenter] postNotificationName:KHDMedicalAlreadLogin object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:KHDSaleAlreadLogin object:nil];
             
             [self dismissViewControllerAnimated:YES completion:nil];
             

@@ -7,7 +7,10 @@
 //
 
 #import "CMViewController.h"
+#import "RootViewController.h"
+#import "WebViewJavascriptBridge.h"
 
-@interface HDSProcessViewController : CMViewController
-
+@interface HDSProcessViewController : CMViewController<RootViewControllerDelegate,UIWebViewDelegate>
+@property (strong,atomic)UIWebView * mainwebView;
+@property (strong, nonatomic) WebViewJavascriptBridge *javascriptBridge;
 @end

@@ -27,7 +27,7 @@
 #import <UIKit/UIKit.h>
 #import "CMViewController.h"
 
-@interface TOWebViewController : CMViewController
+@interface TOWebViewController : UIViewController
 
 - (instancetype)initWithURL:(NSURL *)url;
 - (instancetype)initWithURLString:(NSString *)urlString;

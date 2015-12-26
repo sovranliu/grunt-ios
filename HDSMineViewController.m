@@ -8,6 +8,8 @@
 
 #import "HDSMineViewController.h"
 #import "UIView+Positioning.h"
+#import "TOWebViewController.h"
+#import "CMTabBarController.h"
 
 @interface HDSMineViewController ()
 
@@ -29,8 +31,14 @@
     }
     return self;
 }
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:KHDSaleAlreadLogin object:nil];
+}
 - (void)initExtendedData
 {
+    
 }
 
 - (void)loadUIData
@@ -39,11 +47,14 @@
     [self initMineTableView];
     [self initHeadView];
     [self initLogOutBtnUI];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(showRightName)
+                                                 name:KHDSaleAlreadLogin object:nil];
 }
 
 - (void)initMineTableView
 {
-    self.mineTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 300) style:UITableViewStylePlain];
+    self.mineTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 350) style:UITableViewStylePlain];
     [self.mineTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     self.mineTableView.delegate = self;
     self.mineTableView.dataSource = self;
@@ -54,6 +65,13 @@
     self.mineTableView.alwaysBounceHorizontal = NO;
     [self.view addSubview:self.mineTableView];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+    [self setHiddenTabBarView:NO];
 }
 
 - (void)initHeadView
@@ -72,12 +90,14 @@
 
     
     UIButton * nickName = [[UIButton alloc] initWithFrame:CGRectMake(40, 0, kScreenW - 80, 40)];
-    [nickName setTitle:@"王莎莎 00008" forState:UIControlStateNormal];
+    if ([DataEngine sharedDataEngine].isLogin) {
+        [nickName setTitle:[DataEngine sharedDataEngine].name forState:UIControlStateNormal];
+    }    
     
     [nickName setTintColor:[UIColor whiteColor]];
     [nickName setBackgroundColor:[UIColor clearColor]];
     [nickName.titleLabel setFont:[UIFont systemFontOfSize:18.0]];
-    [nickName setTag:0];
+    [nickName setTag:8];
     [nickName setY:showIconImgView.bottom];
     [headView addSubview:nickName];
     
@@ -101,14 +121,39 @@
 - (void)loginoutAction:(id)sender
 {
     NSLog(@"loginoutAction");
+    
+    
+    [DataEngine sharedDataEngine].isLogin = NO;
+    
+    [DataEngine sharedDataEngine].deviceToken = @"";
+    [DataEngine sharedDataEngine].name = @"";
+    [DataEngine sharedDataEngine].userName = @"";
+    [DataEngine sharedDataEngine].userGlobalId = @"";
+    
+    
+    // 保存本地，记录登陆状态
+    [[DataEngine sharedDataEngine] saveUserBaseInfoData];
+    
+    [(CMTabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController  setSelectedVCIndex:0];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:KHDSaleAlreadLogout object:nil];
+    
+    
+}
+
+- (void)showRightName
+{
+    UIButton * nickName = [self.view viewWithTag:8];
+    [nickName setTitle:[DataEngine sharedDataEngine].name forState:UIControlStateNormal];
 }
 
 
 #pragma mark -列表处理
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -132,6 +177,9 @@
     }else if (indexPath.row == 1)
     {
         [tableCell.textLabel setText:@"热线电话"];
+    }else
+    {
+        [tableCell.textLabel setText:@"问卷调查"];
     }
 
     
@@ -147,14 +195,27 @@
     NSLog(@"didSelectRow");
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    
-//    myhtml5Item * item = [self.localArray objectAtIndex:indexPath.row];
-//    NSString * urlStr = item.url;
-//    NSString *encodedString=[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    TOWebViewController * webViewVC = [[TOWebViewController alloc] initWithURLString:encodedString];
-//    [self setHiddenTabBarView:YES];
-//    [self.navigationController pushViewController:webViewVC animated:YES];
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0)
+    {
+        NSString * aboutUS = @"http://cdn.oss.wehop-resources-beta.wehop.cn/sales/app/sites/v-1/about_us.html";
+        TOWebViewController * webViewVC = [[TOWebViewController alloc] initWithURLString:aboutUS];
+        [self.navigationController pushViewController:webViewVC animated:YES];
+        self.navigationController.navigationBar.hidden = NO;
+        [self setHiddenTabBarView:YES];
+        
+    }else if (indexPath.row == 1)
+    {
+        NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",@"13816202676"];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+    }else
+    {
+        NSString * askquestion = @"http://www.diaoyanbao.com/answer/load/7uHEqXF8";
+        TOWebViewController * webViewVC = [[TOWebViewController alloc] initWithURLString:askquestion];
+        [self.navigationController pushViewController:webViewVC animated:YES];
+        self.navigationController.navigationBar.hidden = NO;
+        [self setHiddenTabBarView:YES];
+    }
+    
 }
 
 

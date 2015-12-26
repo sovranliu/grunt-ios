@@ -85,6 +85,18 @@ typedef enum _GameTypeId
 #endif // __COMMONDEFINE__
 
 
-#pragma mark - 蛋糕馆
+#pragma mark - 恒大销售
+
+
+#define KHDSBaseURL           @"http://beta.service.wehop.cn/user-platform-web-1.0.0/rest/"
+#define KHDLoginURL           @"http://beta.service.wehop.cn/sales-platform-web-1.0-SNAPSHOT/rest/login"
+#define KHDCheckURL           @"http://beta.service.wehop.cn/sales-platform-web-1.0-SNAPSHOT/rest/validateToken"
+
+
+
+#define KHDSMainURL           @"http://cdn.oss.wehop-resources-beta.wehop.cn/sales/app/sites/v-1/index.html"
+#define KHDSProcessURL        @"http://cdn.oss.wehop-resources-beta.wehop.cn/sales/app/sites/v-1/task.html"
 
 #define KHDMedicalADVImg                @"KHDMedicalADVImg"
+#define KHDSaleAlreadLogin              @"KHDSaleAlreadLogin"
+#define KHDSaleAlreadLogout             @"KHDSaleAlreadLogOut"

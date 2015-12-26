@@ -16,8 +16,16 @@
 
 // token
 @property(nonatomic,strong)NSString * deviceToken;
+
+// userGlobalId
+@property(nonatomic,strong)NSString * userGlobalId;
+
 // 用户名
 @property(nonatomic,strong) NSString * userName;
+
+// nickName
+@property(nonatomic,strong)NSString * name;
+
 // 操作指引
 @property(nonatomic,assign) BOOL  isFirstInstruction;
 
