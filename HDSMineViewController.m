@@ -25,7 +25,7 @@
         self.title      = @"我的";
         self.showNav    = YES;
         self.resident   = YES;
-        [self createTabBarItem:self.title iconImgName:@"home_footbar_icon_dianping" selIconImgName:@"home_footbar_icon_dianping_pressed"];
+        [self createTabBarItem:self.title iconImgName:@"home_footbar_icon_mine" selIconImgName:@"home_footbar_icon_mine_pressed"];
         //[self createTabBarItem:self.title iconImgName:nil selIconImgName:nil];
         
     }
@@ -77,11 +77,12 @@
 - (void)initHeadView
 {
     UIView * headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 170)];
-    [headView setBackgroundColor:[UIColor colorWithRed:18.0/255.0 green:134.0/255.0 blue:154.0/255.0 alpha:1.0]];
+
+    [headView setBackgroundColor:[UIColor colorWithRed:0.0/255.0 green:151.0/255.0 blue:170.0/255.0 alpha:1.0]];
     headView.userInteractionEnabled = YES;
     
     UIImageView * showIconImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    [showIconImgView setImage:[UIImage imageNamed:@"mine_profile_default"]];
+    [showIconImgView setImage:[UIImage imageNamed:@"hds_mine_icon"]];
     [headView addSubview:showIconImgView];
     [showIconImgView centerToParent];
     [showIconImgView setCenterY:showIconImgView.centerY - 20];
@@ -114,7 +115,7 @@
     [confirmBtn setTitle:@"退出登入" forState:UIControlStateNormal];
     confirmBtn.layer.cornerRadius = 3.0f;
     [confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [confirmBtn setBackgroundColor:[UIColor colorWithRed:18.0/255.0 green:134.0/255.0 blue:154.0/255.0 alpha:1.0]];
+    [confirmBtn setBackgroundColor:[UIColor colorWithRed:0.0/255.0 green:151.0/255.0 blue:170.0/255.0 alpha:1.0]];
     [self.view addSubview:confirmBtn];
 }
 

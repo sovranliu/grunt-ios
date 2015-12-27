@@ -9,8 +9,10 @@
 #import "CMViewController.h"
 #import "RootViewController.h"
 #import "WebViewJavascriptBridge.h"
+typedef void (^WVJBResponseCallback)(id responseData);
 
 @interface HDSProcessViewController : CMViewController<RootViewControllerDelegate,UIWebViewDelegate>
 @property (strong,atomic)UIWebView * mainwebView;
 @property (strong, nonatomic) WebViewJavascriptBridge *javascriptBridge;
+@property (strong,nonatomic)WVJBResponseCallback myresponseCallback;
 @end

@@ -28,7 +28,7 @@
         self.title      = @"首页";
         self.showNav    = YES;
         self.resident   = YES;
-        [self createTabBarItem:self.title iconImgName:@"home_footbar_icon_dianping" selIconImgName:@"home_footbar_icon_dianping_pressed"];
+        [self createTabBarItem:self.title iconImgName:@"home_footbar_icon_shouye" selIconImgName:@"home_footbar_icon_shouye_pressed"];
         
     }
     return self;
@@ -137,10 +137,15 @@
 
 - (void)showLoginVC
 {
-    HDSLoginViewController * loginVC = [[HDSLoginViewController alloc] init];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 更UI
+        HDSLoginViewController * loginVC = [[HDSLoginViewController alloc] init];
+        
+        UINavigationController * rootNavigationVC = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        [self.navigationController presentViewController:rootNavigationVC animated:YES completion:nil];
+
+    });
     
-    UINavigationController * rootNavigationVC = [[UINavigationController alloc] initWithRootViewController:loginVC];
-    [self.navigationController presentViewController:rootNavigationVC animated:YES completion:nil];
 }
 
 - (NSString *)gpsAttitude
@@ -184,6 +189,7 @@
         }else
         {
             [self showLoginVC];
+ 
         }
     }
 }

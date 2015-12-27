@@ -42,7 +42,7 @@
 
 - (void)loadUIData
 {
-//    self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.navigationBar.hidden = YES;
 //    
     UIButton *backActionBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [backActionBtn setFrame:CGRectMake(10, 30, 40, 30)];
@@ -56,7 +56,7 @@
 //    [navigationBgView addSubview:backActionBtn];
     
     UIImageView * imgview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    [imgview setImage:[UIImage imageNamed:@"health_history"]];
+    [imgview setImage:[UIImage imageNamed:@"hds_icon_default"]];
     [imgview setCenterY:120];
     [imgview setCenterX:self.view.centerX];
     [self.view addSubview:imgview];
@@ -95,6 +95,7 @@
     
     UITextField * pwsField = [[UITextField alloc] initWithFrame:CGRectMake(20, phoneNumField.bottom + 10, kScreenW - 40, 40)];
     pwsField.placeholder = @" 密 码";
+    pwsField.secureTextEntry = YES;
     [pwsField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     pwsField.delegate = self;
     pwsField.tag = 12;
@@ -117,11 +118,11 @@
     [confirmBtn setFrame:CGRectMake(20, pwsField.bottom + 20, kScreenW - 40, 40)];
     [confirmBtn addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
     [confirmBtn setTitle:@"登  入" forState:UIControlStateNormal];
-    [confirmBtn setTitleColor:[UIColor colorWithRed:18.0/255.0 green:134.0/255.0 blue:154.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+    [confirmBtn setTitleColor:[UIColor colorWithRed:0.0/255.0 green:151.0/255.0 blue:170.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     [confirmBtn setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:confirmBtn];
     
-    [self.view setBackgroundColor:[UIColor colorWithRed:18.0/255.0 green:134.0/255.0 blue:154.0/255.0 alpha:1.0]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:0.0/255.0 green:151.0/255.0 blue:170.0/255.0 alpha:1.0]];
     
     
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEdit)]];

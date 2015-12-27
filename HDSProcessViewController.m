@@ -24,7 +24,7 @@
         self.title      = @"进程";
         self.showNav    = YES;
         self.resident   = YES;
-        [self createTabBarItem:self.title iconImgName:@"home_footbar_icon_dianping" selIconImgName:@"home_footbar_icon_dianping_pressed"];
+        [self createTabBarItem:self.title iconImgName:@"home_footbar_icon_task" selIconImgName:@"home_footbar_icon_task_pressed"];
         //[self createTabBarItem:self.title iconImgName:nil selIconImgName:nil];
         
     }
@@ -80,6 +80,7 @@
         //NSLog(@"wifiObjcCallback called: %@", data);
         [self setupCamera];
         //responseCallback(@"Response from task-startObjcCallback");
+        self.myresponseCallback = responseCallback;
     }];
 
 
@@ -136,10 +137,11 @@
 #pragma mark -- scan delegate
 - (void)scanResultStr:(NSString *)str
 {
-    NSLog(@"response 11111 =%@",str);
+//    NSLog(@"response 11111 =%@",str);
     if ([str length] > 0)
     {
-        [_bridge callHandler:@"capture" data:str];
+        self.myresponseCallback(str);
+        
     }
 
 }
