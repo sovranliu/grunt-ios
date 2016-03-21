@@ -13,6 +13,7 @@
 #import "CMTabBarController.h"
 #import "CommonDrawFunc.h"
 #import "CommonGetPlistFunc.h"
+#import "Harpy.h"
 
 static NSString * const sampleDescription1 = @"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 static NSString * const sampleDescription2 = @"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.";
@@ -66,7 +67,7 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
     // 启动图片 cocofix test1
     CGRect rt  = [[UIScreen mainScreen] bounds];
     UIImageView * splashView = [[UIImageView alloc] initWithFrame:rt];
-    [splashView setImageWithURL:[NSURL URLWithString:@"http://pic.qiantucdn.com/58pic/17/29/78/04F58PICB6w_1024.jpg"] placeholderImage:[UIImage imageNamed:@"start_load_default"]];
+//    [splashView setImageWithURL:[NSURL URLWithString:@"http://pic.qiantucdn.com/58pic/17/29/78/04F58PICB6w_1024.jpg"] placeholderImage:[UIImage imageNamed:@"start_load_default"]];
     [self.window addSubview:splashView];
     
     [((AppDelegate *)[UIApplication sharedApplication].delegate).window.rootViewController.view addSubview:splashView];
@@ -75,8 +76,15 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 
     
     [self.window makeKeyAndVisible];
+    
+    //[Harpy checkVersion];
+    
+    
+    
+    
     return YES;
 }
+
 
 - (void)removeSplasImgView:(UIImageView *)imgView
 {

@@ -21,7 +21,7 @@
     self = [super init];
     if (self)
     {
-        self.title      = @"进程";
+        self.title      = @"任务";
         self.showNav    = YES;
         self.resident   = YES;
         [self createTabBarItem:self.title iconImgName:@"home_footbar_icon_task" selIconImgName:@"home_footbar_icon_task_pressed"];

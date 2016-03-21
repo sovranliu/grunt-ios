@@ -108,11 +108,25 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(showLoginVC)
                                                  name:KHDSaleAlreadLogout object:nil];
+    if ([DataEngine sharedDataEngine].deviceToken) {
+        [self checkToken];
+    }
     
-    [self checkToken];
     
-     // check
+     // checkVersion
+    [self checkVersionUpdata];
     
+}
+
+- (void)checkVersionUpdata
+{
+    //总参数封装
+    NSMutableDictionary * totalParamDic =[[NSMutableDictionary alloc] initWithCapacity:1];
+    [totalParamDic setObject:@"ios" forKey:@"firmType"];
+    
+    NSMutableString * baseUrl = [NSMutableString stringWithString:KHDCheckVersionURL];
+    // 发送数据
+    [[DataEngine sharedDataEngine] reqAsyncHttpGet:self urlStr:baseUrl userInfo:totalParamDic withReqTag:2];
 }
 
 -(void)loadRequestURL
@@ -191,6 +205,38 @@
             [self showLoginVC];
  
         }
+    }else if (vc == self&& [responseData isKindOfClass:[NSDictionary class]] && tag == 2)
+    {
+        int code = [[responseData objectForKey:@"code"] intValue];
+        NSString * msg =[JSONFormatFunc strValueForKey:@"msg" ofDict:responseData];
+        NSDictionary * dicdata = [JSONFormatFunc dictionaryValueForKey:@"data" ofDict:responseData];
+        NSLog(@"code = %d,msg =%@",code,msg);
+        if (code == 1) // check成功
+        {
+            NSString* thisVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey: (NSString*)kCFBundleVersionKey];
+            NSString * appVersion  = [dicdata objectForKey:@"appVersion"];
+            
+            NSArray * array = [appVersion componentsSeparatedByString:@"."];
+            NSMutableString * netAppVersion = [NSMutableString string];
+            for (NSString * subStr in array)
+            {
+                [netAppVersion appendString:subStr];
+            }
+            NSLog(@"app version = %@ and local version = %@",netAppVersion,thisVersion);
+            
+            NSString * downloadUrl  = [dicdata objectForKey:@"downloadUrl"];
+            self.downLoadURL = downloadUrl;
+            
+            if ([thisVersion intValue] < [netAppVersion intValue])
+            {
+                UIAlertView * alerView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"有新版本提供，请下载！" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确认", nil];
+                [alerView show];
+            }
+            
+        }else
+        {
+            
+        }
     }
 }
 
@@ -214,7 +260,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.downLoadURL]];
+    }
+}
 
 @end

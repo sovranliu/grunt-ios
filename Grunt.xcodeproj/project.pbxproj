@@ -109,6 +109,7 @@
 		CD9126B91C21498E0040E455 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9126B61C21498E0040E455 /* SDWebImagePrefetcher.m */; };
 		CD9126BF1C2149DB0040E455 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9126BD1C2149DB0040E455 /* SDImageCache.m */; };
 		CD9126C41C2149F40040E455 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9126C21C2149F40040E455 /* SDWebImageDownloader.m */; };
+		CDCE48B61C3B91B2008A17D3 /* Harpy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCE48B41C3B91B2008A17D3 /* Harpy.m */; };
 		CDDBEA851B7C6E910077AA63 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CDDBEA821B7C6E910077AA63 /* README.md */; };
 		CDDBEA861B7C6E910077AA63 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBEA841B7C6E910077AA63 /* UIView+Positioning.m */; };
 		CDEBF3AB1C2F8A24007F0D5F /* hds_icon_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEBF39A1C2F8A24007F0D5F /* hds_icon_default@2x.png */; };
@@ -319,6 +320,9 @@
 		CD9126C11C2149F40040E455 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
 		CD9126C21C2149F40040E455 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
 		CD9126C31C2149F40040E455 /* SDWebImageDownloaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderDelegate.h; sourceTree = "<group>"; };
+		CDCE48B31C3B91B2008A17D3 /* Harpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harpy.h; sourceTree = "<group>"; };
+		CDCE48B41C3B91B2008A17D3 /* Harpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Harpy.m; sourceTree = "<group>"; };
+		CDCE48B51C3B91B2008A17D3 /* HarpyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarpyConstants.h; sourceTree = "<group>"; };
 		CDDBEA821B7C6E910077AA63 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CDDBEA831B7C6E910077AA63 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
 		CDDBEA841B7C6E910077AA63 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
@@ -547,6 +551,7 @@
 		CD72C2511B789F16000FDF73 /* CMCompoment */ = {
 			isa = PBXGroup;
 			children = (
+				CDCE48B21C3B91A0008A17D3 /* CMUpdate */,
 				CD78B5991C2AA74F00860900 /* CMJavaScriptBridge */,
 				CD78B5911C2AA1D100860900 /* CMScan */,
 				CD78B58A1C2A91E400860900 /* CCLocation */,
@@ -937,6 +942,16 @@
 			name = Downloader;
 			sourceTree = "<group>";
 		};
+		CDCE48B21C3B91A0008A17D3 /* CMUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				CDCE48B31C3B91B2008A17D3 /* Harpy.h */,
+				CDCE48B41C3B91B2008A17D3 /* Harpy.m */,
+				CDCE48B51C3B91B2008A17D3 /* HarpyConstants.h */,
+			);
+			name = CMUpdate;
+			sourceTree = "<group>";
+		};
 		CDDBEA811B7C6E750077AA63 /* CMUIViewPositioning */ = {
 			isa = PBXGroup;
 			children = (
@@ -1120,6 +1135,7 @@
 				CD72C2631B78A073000FDF73 /* NSObject+Customizer.m in Sources */,
 				CD9126B91C21498E0040E455 /* SDWebImagePrefetcher.m in Sources */,
 				CD72C2FF1B7AEE77000FDF73 /* EARestrictedScrollView.m in Sources */,
+				CDCE48B61C3B91B2008A17D3 /* Harpy.m in Sources */,
 				CD72C28F1B78A1BF000FDF73 /* CommonDrawFunc.m in Sources */,
 				CD72C2D41B78A31A000FDF73 /* DataEngine.m in Sources */,
 				CD78B59E1C2AA78F00860900 /* WebViewJavascriptBridge.m in Sources */,
@@ -1217,6 +1233,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "056b5579-effa-4d4f-8615-47b65fbeca7c";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1252,6 +1269,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "056b5579-effa-4d4f-8615-47b65fbeca7c";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

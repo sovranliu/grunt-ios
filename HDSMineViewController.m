@@ -198,7 +198,7 @@
     
     if (indexPath.row == 0)
     {
-        NSString * aboutUS = @"http://cdn.oss.wehop-resources-beta.wehop.cn/sales/app/sites/v-1/about_us.html";
+        NSString * aboutUS = @"http://cdn.oss.wehop-resources.wehop.cn/sales/app/sites/v-1/about_us.html?version=1.0.2";
         TOWebViewController * webViewVC = [[TOWebViewController alloc] initWithURLString:aboutUS];
         [self.navigationController pushViewController:webViewVC animated:YES];
         self.navigationController.navigationBar.hidden = NO;

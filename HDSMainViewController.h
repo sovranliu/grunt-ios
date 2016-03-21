@@ -10,7 +10,8 @@
 #import "WebViewJavascriptBridge.h"
 
 
-@interface HDSMainViewController : CMViewController<UIWebViewDelegate>
+@interface HDSMainViewController : CMViewController<UIWebViewDelegate,UIAlertViewDelegate>
 @property (strong,atomic)UIWebView * mainwebView;
 @property (strong, nonatomic) WebViewJavascriptBridge *javascriptBridge;
+@property (strong,nonatomic)NSString * downLoadURL;
 @end

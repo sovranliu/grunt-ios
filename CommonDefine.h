@@ -88,14 +88,14 @@ typedef enum _GameTypeId
 #pragma mark - 恒大销售
 
 
-#define KHDSBaseURL           @"http://beta.service.wehop.cn/user-platform-web-1.0.0/rest/"
-#define KHDLoginURL           @"http://beta.service.wehop.cn/sales-platform-web-1.0-SNAPSHOT/rest/login"
-#define KHDCheckURL           @"http://beta.service.wehop.cn/sales-platform-web-1.0-SNAPSHOT/rest/validateToken"
+#define KHDSBaseURL           @"http://ppe.service.wehop.cn/user-platform-web/rest/"
+#define KHDLoginURL           @"http://ppe.service.wehop.cn/sales-platform-web/rest/login"
+#define KHDCheckURL           @"http://ppe.service.wehop.cn/sales-platform-web/rest/validateToken"
+#define KHDCheckVersionURL    @"http://ppe.service.wehop.cn/sales-platform-web/rest/getCurrentAppVersion"
 
 
-
-#define KHDSMainURL           @"http://cdn.oss.wehop-resources-beta.wehop.cn/sales/app/sites/v-1/index.html"
-#define KHDSProcessURL        @"http://cdn.oss.wehop-resources-beta.wehop.cn/sales/app/sites/v-1/task.html"
+#define KHDSMainURL           @"http://cdn.oss.wehop-resources-ppe.wehop.cn/sales/app/sites/v-1/index.html"
+#define KHDSProcessURL        @"http://cdn.oss.wehop-resources-ppe.wehop.cn/sales/app/sites/v-1/task.html"
 
 #define KHDMedicalADVImg                @"KHDMedicalADVImg"
 #define KHDSaleAlreadLogin              @"KHDSaleAlreadLogin"
